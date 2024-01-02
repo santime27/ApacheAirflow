@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     command: webserver
     volumes:
-      - ./dags:/usr/local/airflow/dags
+      - /data/airflow/dags:/usr/local/airflow/dags
     ports:
       - "8080:8080"
   scheduler:
@@ -15,7 +15,7 @@ services:
       dockerfile: Dockerfile
     command: scheduler
     volumes:
-      - ./dags:/usr/local/airflow/dags
+      - /data/airflow/dags:/usr/local/airflow/dags
   postgres:
     image: postgres:latest
     environment:
