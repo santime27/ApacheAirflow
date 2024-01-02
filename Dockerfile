@@ -4,7 +4,7 @@ FROM apache/airflow:latest
 # Set the AIRFLOW_HOME environment variable
 ENV AIRFLOW_HOME=/usr/local/airflow
 
-COPY ./airflow.cfg:/usr/local/airflow/airflow.cfg
+COPY airflow.cfg /usr/local/airflow/airflow.cfg
 
 # Switch to the root user
 USER root
