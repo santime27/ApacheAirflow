@@ -17,7 +17,7 @@ USER airflow
 RUN airflow db init
 
 # Customize the airflow.cfg file
-RUN echo "[core]" > ${AIRFLOW_HOME}/airflow.cfg && \
+RUN echo "[core]" >> ${AIRFLOW_HOME}/airflow.cfg && \
     echo "airflow_home = ${AIRFLOW_HOME}" >> ${AIRFLOW_HOME}/airflow.cfg && \
     echo "executor = LocalExecutor" >> ${AIRFLOW_HOME}/airflow.cfg && \
     echo "" >> ${AIRFLOW_HOME}/airflow.cfg && \
